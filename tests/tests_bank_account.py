@@ -1,6 +1,6 @@
 import unittest, os
 
-from exceptions import InsufficientFundsError
+from src.exceptions import InsufficientFundsError
 from src.bank_account import BankAccount
 
 
