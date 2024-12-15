@@ -25,3 +25,15 @@ python -m unittest tests.test_calculator.CalculatorTests.test_sum
 # Ejecutar los test por suite
 PYTHONPATH=. python tests/suites.py
 ```
+
+## Test Name Syntax
+
+Para escribir los nombres de los test se puede seguir la siguiente sintaxis:
+
+- Se debe empezar por: <code>test\_</code>
+- Nombre del método que se va probar: <code>\_deposit\_</code>
+- El escenario que se va probar: <code>\_positive_amount\_</code>
+- Resultado esperado: <code>\_increment_balance</code>
+
+**SINTAXIS**: <code>test_method_scenario_result</code><br/>
+**Resultado Sintaxis**: <code>test_deposit_positive_amount_increment_balance</code>
