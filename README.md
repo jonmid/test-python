@@ -24,6 +24,9 @@ python -m unittest tests.test_calculator.CalculatorTests.test_sum
 
 # Ejecutar los test por suite
 PYTHONPATH=. python tests/suites.py
+
+# Ejecutar un test utilizando "DocTest"
+python -m doctest src/calculator.py
 ```
 
 ## Test Name Syntax
