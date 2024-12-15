@@ -2,6 +2,7 @@ import unittest
 
 SERVER="server_b"
 
+
 class AllAssertsTests(unittest.TestCase):
 
     # Test para evaluar igualdad
@@ -36,14 +37,20 @@ class AllAssertsTests(unittest.TestCase):
             {1, 2, 3}
         )
     
+    # "@unittest.skip" nos permite saltar esta prueba
     @unittest.skip("Trabajo en progreso, será habilitada nuevamente")
     def test_skip(self):
-        self.assertEqual("hola", "by")
+        self.assertEqual("hola", "bye")
 
+    # "@unittest.skipIf" salta la prueba, pero recibe una condición y la razón
+    # NOTA: Solo se la salta si la condición es verdadera
+    # Condición: SERVER == "server_b"
+    # Razón: "Saltado porque no estamos en el servidor"
     @unittest.skipIf(SERVER == "server_b", "Saltado porque no estamos en el servidor")
     def test_skip_if(self):
         self.assertEqual(100, 100)
-
+    
+    # Se utiliza para un error esperado
     @unittest.expectedFailure
     def test_expected_failure(self):
         self.assertEqual(100, 150)
