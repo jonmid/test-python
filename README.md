@@ -15,4 +15,7 @@ pip freeze >  requirements.txt
 
 # Ejecutar los test
 python -m unittest discover -v -s tests
+
+# Ejecutar los test por suite
+PYTHONPATH=. python tests/test_suites.py
 ```
