@@ -13,6 +13,9 @@ pip install -r requirements.txt
 # Generar archivo de "requirements.txt"
 pip freeze >  requirements.txt
 
+# Sacar la version de un paquete instalado
+pip freeze |  grep coverage
+
 # Ejecutar los test generales
 python -m unittest discover -v -s tests
 
@@ -27,6 +30,12 @@ PYTHONPATH=. python tests/suites.py
 
 # Ejecutar un test utilizando "DocTest"
 python -m doctest src/calculator.py
+
+# Ejecutar "coverage" de los test
+coverage help
+coverage run --source src -m unittest
+coverage report # Para mirar por consola
+coverage html # Para mirar desde el navegador
 ```
 
 ## Test Name Syntax
