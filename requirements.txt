@@ -4,6 +4,7 @@ charset-normalizer==3.4.0
 decorator==5.1.1
 exceptiongroup==1.2.2
 executing==2.1.0
+Faker==33.1.0
 idna==3.10
 iniconfig==2.0.0
 ipdb==0.13.13
@@ -19,7 +20,9 @@ ptyprocess==0.7.0
 pure_eval==0.2.3
 Pygments==2.18.0
 pytest==8.3.4
+python-dateutil==2.9.0.post0
 requests==2.32.3
+six==1.17.0
 stack-data==0.6.3
 tomli==2.2.1
 traitlets==5.14.3
