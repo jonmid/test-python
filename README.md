@@ -16,14 +16,17 @@ pip freeze >  requirements.txt
 # Sacar la version de un paquete instalado
 pip freeze |  grep coverage
 
-# Ejecutar los test generales
+# Ejecutar los test generales (unittest)
 python -m unittest discover -v -s tests
 
-# Ejecutar todos los test de una clase
+# Ejecutar todos los test de una clase (unittest)
 python -m unittest tests.test_calculator.CalculatorTests
 
-# Ejecutar un test de una clase
+# Ejecutar un test de una clase (unittest)
 python -m unittest tests.test_calculator.CalculatorTests.test_sum
+
+# Ejecutar un test de una clase (pytest)
+pytest tests/test_pytest.py -v
 
 # Ejecutar los test por suite
 PYTHONPATH=. python tests/suites.py
